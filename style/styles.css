@@ -63,11 +63,13 @@ header {
 .button-container::-webkit-scrollbar {
     width: 6px;
     background-color: transparent;
+    display: none;
 }
 
 .button-container::-webkit-scrollbar-thumb {
     background-color: transparent;
     border-radius: 3px;
+    display: none;
 }
 
 @keyframes glow {
