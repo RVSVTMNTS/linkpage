@@ -63,13 +63,11 @@ header {
 .button-container::-webkit-scrollbar {
     width: 6px;
     background-color: transparent;
-    display: none;
 }
 
 .button-container::-webkit-scrollbar-thumb {
     background-color: transparent;
     border-radius: 3px;
-    display: none;
 }
 
 @keyframes glow {
@@ -91,6 +89,12 @@ header {
     text-decoration: none;
     border-radius: 5px;
     font-size: 18px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.projet-button::-webkit-scrollbar {
+    display: none;
 }
 
 .projet-button:hover {
