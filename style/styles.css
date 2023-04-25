@@ -25,6 +25,7 @@ header {
     display: flex;
     justify-content: center;
     padding: 20px;
+    z-index: 100;
 }
 
 .logo {
@@ -45,6 +46,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 50;
 }
 
 .button-container {
@@ -121,6 +123,7 @@ footer {
     width: 100%;
     opacity: 0;
     transition: opacity 0.3s;
+    z-index: 100;
 }
 
 @media (max-width: 768px) {
