@@ -59,6 +59,7 @@ header {
     overflow-y: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    overflow: -moz-scrollbars-none;
 }
 
 /* Ajoutez un style pour les barres de défilement personnalisées (facultatif) */
