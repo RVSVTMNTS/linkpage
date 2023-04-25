@@ -54,6 +54,18 @@ header {
     gap: 50px;
     margin: 50px;
     max-height: calc(100vh - 300px);
+    overflow-y: auto; /* Ajouter une barre de défilement si nécessaire */
+}
+
+/* Ajoutez un style pour les barres de défilement personnalisées (facultatif) */
+.button-container::-webkit-scrollbar {
+    width: 6px;
+    background-color: transparent;
+}
+
+.button-container::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 3px;
 }
 
 @keyframes glow {
