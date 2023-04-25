@@ -56,13 +56,16 @@ header {
     gap: 50px;
     margin: 50px;
     max-height: calc(100vh - 300px);
-    overflow-y: auto; /* Ajouter une barre de défilement si nécessaire */
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 /* Ajoutez un style pour les barres de défilement personnalisées (facultatif) */
 .button-container::-webkit-scrollbar {
     width: 6px;
     background-color: transparent;
+    display: none;
 }
 
 .button-container::-webkit-scrollbar-thumb {
@@ -89,13 +92,13 @@ header {
     text-decoration: none;
     border-radius: 5px;
     font-size: 18px;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    /* -ms-overflow-style: none;
+    scrollbar-width: none; */
 }
 
-.projet-button::-webkit-scrollbar {
+/* .projet-button::-webkit-scrollbar {
     display: none;
-}
+} */
 
 .projet-button:hover {
     color: #0a0a0a;
