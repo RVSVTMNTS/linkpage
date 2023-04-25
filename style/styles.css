@@ -169,19 +169,6 @@ footer {
     animation: blink-caret 1s step-end infinite;
 }
 
-/* .typewriter {
-    position: relative;
-    overflow: hidden;
-}
-
-.caret {
-    display: inline-block;
-    background-color: #02bb0b;
-    width: 2px;
-    height: 100%;
-    animation: blink 1s steps(1, end) infinite;
-} */
-
 @keyframes blink-caret {
     0%, 50% { opacity: 1; }
     51%, 100% { opacity: 0; }
