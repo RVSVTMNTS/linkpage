@@ -34,3 +34,20 @@ document.addEventListener('mousemove', (e) => {
         footer.style.opacity = '0';
     }
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    var epilepsyWarningModal = document.getElementById('epilepsyWarningModal');
+    var yesButton = document.getElementById('yesButton');
+    var noButton = document.getElementById('noButton');
+
+    epilepsyWarningModal.style.display = 'block';
+
+    yesButton.addEventListener('click', function () {
+        epilepsyWarningModal.style.display = 'none';
+        document.body.classList.add("epileptic-background");
+    });
+
+    noButton.addEventListener('click', function () {
+        epilepsyWarningModal.style.display = 'none';
+    });
+});

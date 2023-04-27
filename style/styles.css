@@ -204,3 +204,68 @@ footer {
         background-color: transparent;
     }
 }
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.925);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    text-align: center;
+}
+
+.modal-content h1 {
+    margin: 0 0 20px;
+}
+
+.modal-content p {
+    margin: 0 0 20px;
+}
+
+.modal-content button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    border-radius: 5px;
+}
+
+.modal-content button:hover {
+    background-color: #45a049;
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+    .modal-content {
+        width: 90%;
+    }
+}
+
+.epileptic-background .background-animation {
+    display: none;
+}
+
+.epileptic-background {
+    background-color: #0a0a0a; /* Vous pouvez changer cette couleur en fonction de vos préférences */
+}
