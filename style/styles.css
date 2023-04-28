@@ -85,6 +85,8 @@ header {
 
 .projet-button {
     display: inline;
+    justify-content: space-between;
+    align-items: center;
     height: 25px;
     width: 175px;
     padding: 19px 150px;
@@ -268,4 +270,8 @@ footer {
 
 .epileptic-background {
     background-color: #0a0a0a; /* Vous pouvez changer cette couleur en fonction de vos préférences */
+}
+
+.countdown-text {
+    margin-right: 10px;
 }
