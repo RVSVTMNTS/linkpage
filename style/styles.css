@@ -138,6 +138,10 @@ footer {
     z-index: 100;
 }
 
+footer a {
+    color: #777777;
+}
+
 @media (max-width: 768px) {
     .logo {
         height: 150px;
