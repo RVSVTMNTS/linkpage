@@ -35,20 +35,43 @@ document.addEventListener('mousemove', (e) => {
     }
 });
 
+// document.addEventListener('DOMContentLoaded', function () {
+//     var epilepsyWarningModal = document.getElementById('epilepsyWarningModal');
+//     var yesButton = document.getElementById('yesButton');
+//     var noButton = document.getElementById('noButton');
+
+//     epilepsyWarningModal.style.display = 'block';
+
+//     yesButton.addEventListener('click', function () {
+//         epilepsyWarningModal.style.display = 'none';
+//         document.body.classList.add("epileptic-background");
+//     });
+
+//     noButton.addEventListener('click', function () {
+//         epilepsyWarningModal.style.display = 'none';
+//     });
+// });
+
 document.addEventListener('DOMContentLoaded', function () {
     var epilepsyWarningModal = document.getElementById('epilepsyWarningModal');
     var yesButton = document.getElementById('yesButton');
     var noButton = document.getElementById('noButton');
+    var continueButton = document.getElementById('continueButton');
 
     epilepsyWarningModal.style.display = 'block';
 
-    yesButton.addEventListener('click', function () {
-        epilepsyWarningModal.style.display = 'none';
-        document.body.classList.add("epileptic-background");
-    });
+    function enableContinueButton() {
+        continueButton.disabled = false;
+    }
 
-    noButton.addEventListener('click', function () {
+    yesButton.addEventListener('change', enableContinueButton);
+    noButton.addEventListener('change', enableContinueButton);
+
+    continueButton.addEventListener('click', function () {
         epilepsyWarningModal.style.display = 'none';
+        if (yesButton.checked) {
+            document.body.classList.add("epileptic-background");
+        }
     });
 });
 

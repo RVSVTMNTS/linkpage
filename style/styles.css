@@ -211,6 +211,19 @@ footer a {
     }
 }
 
+.color-blink {
+    animation: color-blink-animation 1s linear infinite;
+}
+
+@keyframes color-blink-animation {
+    0%, 49% {
+        color: #bb0202;
+    }
+    50%, 100% {
+        color: #fefefe; /* Couleur de clignotement souhaitée, par exemple rouge */
+    }
+}
+
 .modal {
     display: none;
     position: fixed;
@@ -278,4 +291,69 @@ footer a {
 
 .countdown-text {
     margin-right: 10px;
+}
+
+#epilepsyWarningModal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Couleur d'arrière-plan semi-transparente */
+}
+
+#epilepsyWarningModal strong {
+    color :rgba(2, 187, 11, 0.7)
+}
+
+#epilepsyWarningModal .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1d1d1d;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    text-align: center;
+}
+
+#epilepsyWarningModal .modal-content h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fefefe;
+}
+
+#epilepsyWarningModal .modal-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #fefefe;
+}
+
+#epilepsyWarningModal .modal-content button {
+    border: none;
+    background-color: #333333;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+#epilepsyWarningModal .modal-content button:hover {
+    background-color: #444444;
+}
+
+.epilepsy-label {
+    color: #ffffff; /* Couleur du texte des étiquettes */
+}
+
+.epilepsy-label:hover {
+    color: rgba(2, 187, 11, 0.7); /* Couleur du texte des étiquettes au survol */
 }
