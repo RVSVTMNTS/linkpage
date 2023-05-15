@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
     var countdownElement = document.getElementById('countdown');
     var countdownTextElement = document.getElementById('countdownText');
-    var countdownDate = new Date('May 15, 2023 00:00:00 UTC+2').getTime();
+    var countdownDate = new Date('June 05, 2023 00:00:00 UTC+2').getTime();
 
     function updateCountdown() {
         var now = new Date().getTime();
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-        countdownTextElement.textContent = 'Project #2 - SOON :  ';
+        countdownTextElement.textContent = 'RVSEVENTS_SOON :  ';
         countdownElement.textContent = days + 'j ' + hours + 'h ' + minutes + 'm ' + seconds + 's ';
 
         if (timeLeft < 0) {
