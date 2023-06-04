@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
     var countdownElement = document.getElementById('countdown');
     var countdownTextElement = document.getElementById('countdownText');
-    var countdownDate = new Date('June 05, 2023 00:00:00 UTC+2').getTime();
+    var countdownDate = new Date('June 07, 2023 00:00:00 UTC+2').getTime();
 
     function updateCountdown() {
         var now = new Date().getTime();
