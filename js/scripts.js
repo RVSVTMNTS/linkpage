@@ -1,23 +1,38 @@
-const text = 'Click.Here.Stay.Tuned';
-const typewriterElement = document.getElementById('typewriter');
-const typewriterTextElement = typewriterElement.querySelector('span');
-let index = 0;
+function typeCharacter(text, typewriterElementId, delay, resetDelay) {
+    const typewriterElement = document.getElementById(typewriterElementId);
+    const typewriterTextElement = typewriterElement.querySelector('span');
+    let index = 0;
 
-function typeCharacter() {
-    if (index < text.length) {
-        typewriterTextElement.innerText = text.slice(0, index + 1);
-        index++;
-        setTimeout(typeCharacter, 100);
-    } else {
-        setTimeout(() => {
-            typewriterTextElement.innerText = '';
-            index = 0;
-            typeCharacter();
-        }, 3500);
+    function type() {
+        if (index < text.length) {
+            typewriterTextElement.innerText = text.slice(0, index + 1);
+            index++;
+            setTimeout(type, delay);
+        } else {
+            setTimeout(() => {
+                typewriterTextElement.innerText = '';
+                index = 0;
+                type();
+            }, resetDelay);
+        }
     }
+
+    type();
 }
 
-typeCharacter();
+const text = 'Click.Here.Stay.Tuned';
+const typewriterElementId = 'typewriter';
+const delay = 100;
+const resetDelay = 3500;
+
+typeCharacter(text, typewriterElementId, delay, resetDelay);
+
+const text2 = 'PRE_ORDER_NOW_';
+const typewriterElementId2 = 'projet-button-spe';
+const delay2 = 100;
+const resetDelay2 = 3500;
+
+typeCharacter(text2, typewriterElementId2, delay2, resetDelay2);
 
 const footer = document.getElementById('footer');
 
