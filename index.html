@@ -8,7 +8,7 @@
 </head>
 <body>
     <div id="epilepsyWarningModal" class="modal">
-        <div class="modal-content">
+        <div id="epilepsyWarningContent" class="modal-content">
             <h1>Us</h1>
             <p>
                 Bienvenue chez <img src="assets/logo  tv.png" alt="Logo" class="logo2"> (REVERSE™) , où nous croyons en un <strong>style intemporel</strong>, offrant des vêtements de <strong>qualité supérieure</strong> qui transcendent les <strong>tendances éphémères</strong>. Notre mission est de créer une <strong>mode respectueuse de l'environnement</strong>, qui ne sacrifie pas le style pour la <strong>durabilité</strong>.
@@ -50,20 +50,21 @@
                 <input type="radio" id="noButton" name="epilepsy" value="no">
                 <label class="epilepsy-label" for="noButton">Non</label>
             </div>
+            <br>
             <button id="continueButton" disabled>Continuer</button>
         </div>
     </div>
       
-    <img src="assets/ezgif.com-crop.webp" alt="Arrière-plan animé" class="background-animation">
+    <img src="assets/ezgif.com-crop.webp" alt="Arrière-plan animé" id="webp-animation" class="background-animation">
     <header>
-        <img src="assets/design t-shirt.png" alt="Logo" class="logo">
-    </header>
-    <main class="main">
         <iframe class="spotify-widget" 
             src="https://open.spotify.com/embed/playlist/3h9AGttcr4LZ4dgdSWGmC6?utm_source=generator&theme=0&autoplay=true&shuffle=true" 
-            width="40%" height="152" frameBorder="0" 
+             frameBorder="0" 
             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" loading="lazy">
-        </iframe>        
+        </iframe> 
+        <img src="assets/design t-shirt.png" alt="Logo" class="logo">
+    </header>
+    <main class="main">       
         <div class="button-container">
             <a href="https://rvsvtmnts.myshopify.com/" class="projet-button" id="projet-button-spe" target="_blank"><span class="button-text">PRE_ORDER_NOW_</span><span class="caret"> |</span></a>
             <a href="#" class="projet-button" id="countdownButton">
@@ -79,7 +80,7 @@
             </a>
         </div>
     </main>
-    <footer id="footer">
+    <footer id="footer" class="footer">
         <p>All right reserved <img src="assets/logo  tv.png" alt="Logo" class="logo2"> &copy; 2023 - credit to <a href="https://n-lite.tumblr.com/" target="_blank">N-LITE</a> for background</p>
     </footer>
     <script src="js/scripts.js"></script>

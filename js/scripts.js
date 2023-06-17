@@ -1,3 +1,61 @@
+/* DISCLAIMER / EPILEPSY WARNING *******************************************************************/
+window.addEventListener('DOMContentLoaded', function() {
+    var modal = document.getElementById('epilepsyWarningContent');
+    modal.classList.add('visible');
+});
+
+/* FOND NOIR SI OUI ************************************************************************/
+
+document.addEventListener('DOMContentLoaded', function () {
+    var epilepsyWarningModal = document.getElementById('epilepsyWarningModal');
+    var yesButton = document.getElementById('yesButton');
+    var noButton = document.getElementById('noButton');
+    var continueButton = document.getElementById('continueButton');
+
+    function enableContinueButton() {
+        continueButton.disabled = false;
+    }
+
+    yesButton.addEventListener('change', enableContinueButton);
+    noButton.addEventListener('change', enableContinueButton);
+
+    continueButton.addEventListener('click', function () {
+        epilepsyWarningModal.style.display = 'none';
+        if (yesButton.checked) {
+            document.body.classList.add("epileptic-background");
+        }
+    });
+});
+
+/* COUNTDOWN ************************************************************************************/ 
+document.addEventListener('DOMContentLoaded', function () {
+    var countdownElement = document.getElementById('countdown');
+    var countdownTextElement = document.getElementById('countdownText');
+    var countdownDate = new Date('July 10, 2023 00:00:00 UTC+2').getTime();
+
+    function updateCountdown() {
+        var now = new Date().getTime();
+        var timeLeft = countdownDate - now;
+
+        var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+        countdownTextElement.textContent = 'RVSEVENTS_SOON :  ';
+        countdownElement.textContent = days + 'j ' + hours + 'h ' + minutes + 'm ' + seconds + 's ';
+
+        if (timeLeft < 0) {
+            clearInterval(countdownInterval);
+            countdownElement.textContent = 'Terminé';
+        }
+    }
+
+    var countdownInterval = setInterval(updateCountdown, 1000);
+});
+
+/* TYPEWRITERS ************************************************************************/
+
 function typeCharacter(text, typewriterElementId, delay, resetDelay) {
     const typewriterElement = document.getElementById(typewriterElementId);
     const typewriterTextElement = typewriterElement.querySelector('span');
@@ -34,6 +92,7 @@ const resetDelay2 = 3500;
 
 typeCharacter(text2, typewriterElementId2, delay2, resetDelay2);
 
+/* SHOW FOOTER ********************************************************************************************/
 const footer = document.getElementById('footer');
 
 document.addEventListener('mousemove', (e) => {
@@ -50,51 +109,3 @@ document.addEventListener('mousemove', (e) => {
     }
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    var epilepsyWarningModal = document.getElementById('epilepsyWarningModal');
-    var yesButton = document.getElementById('yesButton');
-    var noButton = document.getElementById('noButton');
-    var continueButton = document.getElementById('continueButton');
-
-    epilepsyWarningModal.style.display = 'block';
-
-    function enableContinueButton() {
-        continueButton.disabled = false;
-    }
-
-    yesButton.addEventListener('change', enableContinueButton);
-    noButton.addEventListener('change', enableContinueButton);
-
-    continueButton.addEventListener('click', function () {
-        epilepsyWarningModal.style.display = 'none';
-        if (yesButton.checked) {
-            document.body.classList.add("epileptic-background");
-        }
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-    var countdownElement = document.getElementById('countdown');
-    var countdownTextElement = document.getElementById('countdownText');
-    var countdownDate = new Date('July 10, 2023 00:00:00 UTC+2').getTime();
-
-    function updateCountdown() {
-        var now = new Date().getTime();
-        var timeLeft = countdownDate - now;
-
-        var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-        countdownTextElement.textContent = 'RVSEVENTS_SOON :  ';
-        countdownElement.textContent = days + 'j ' + hours + 'h ' + minutes + 'm ' + seconds + 's ';
-
-        if (timeLeft < 0) {
-            clearInterval(countdownInterval);
-            countdownElement.textContent = 'Terminé';
-        }
-    }
-
-    var countdownInterval = setInterval(updateCountdown, 1000);
-});
