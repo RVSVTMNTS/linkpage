@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-        countdownTextElement.textContent = 'RVSEVENTS_SOON :  ';
+        countdownTextElement.textContent = 'RVSEVENTS :  ';
         countdownElement.textContent = days + 'j ' + hours + 'h ' + minutes + 'm ' + seconds + 's ';
 
         if (timeLeft < 0) {
