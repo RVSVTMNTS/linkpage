@@ -85,7 +85,7 @@ const resetDelay = 3500;
 
 typeCharacter(text, typewriterElementId, delay, resetDelay);
 
-const text2 = 'PRE_ORDER_NOW_';
+const text2 = 'SHOP_NOW_';
 const typewriterElementId2 = 'projet-button-spe';
 const delay2 = 100;
 const resetDelay2 = 3500;
